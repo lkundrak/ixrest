@@ -1,0 +1,41 @@
+.TH IXREST "1" "August 2021"
+.SH NAME
+ixrest \- restore PC/IX archives
+.SH SYNOPSIS
+.SY ixrest
+.OP \-u
+.OP \-C dir
+.I volume ...
+.YS
+.SH DESCRIPTION
+.PP
+Extract PC/IX archives, such as the PC/IX installation media.
+.TP
+.B -u
+unprivileged operation. Ignores errors conducting operations that require
+elevated privileges, such as setting setuid/setgid bits, creation of device
+nodes or changing file ownership.
+.TP
+.B -C
+set target directory for extraction.
+.SH BUGS
+Implements only bare minimum of functionality to extract PC/IX installation
+disks. Some archives might not be supported.
+.PP
+Little effort is spent checking validity of the input.
+Running on untrusted archives is a security hazard.
+.SH COPYRIGHT
+Copyright \(co 2021 Lubomir Rintel
+.MT lkundrak@v3.sk
+.ME .
+.br
+License GPLv2+: GNU GPL version 2 or later
+.UR https://gnu.org/licenses/gpl.html
+.UE .
+.br
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+.SH SEE ALSO
+.IR tar (1),
+.IR cpio (1),
+.IR pax (1).
